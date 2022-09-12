@@ -10,6 +10,7 @@ import UIKit
 class NewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+
     
     static let identifier = "NewsCollectionViewCell"
     
@@ -18,7 +19,8 @@ class NewsCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    public func configure(with image: UIImage) {
+    public func configure(image: UIImage,title: String) {
+        titleLabel.text = title
         imageView.image = image
     }
 
