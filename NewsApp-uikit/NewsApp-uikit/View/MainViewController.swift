@@ -9,9 +9,9 @@ import UIKit
 class MainViewController: UIViewController {
 
     var news = [
-    News(title: "SPIDERMAN SUPER-HERO OR SUPER-ZERO?", image: "spider", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore "),
-    News(title: "Ut enim ad minim veniam, quis nostrud exercitation", image: "spider", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "),
-    News(title: "Excepteur sint occaecat cupidatat", image: "spider", description: " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+    News(title: "xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?", image: "where", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore "),
+    News(title: "Ut enim ad minim veniam, quis nostrud exercitation", image: "soccer", description: "Ut enim ad minim veniam, quis nostrud. "),
+    News(title: "Excepteur sint occaecat cupidatat", image: "btc", description: " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
     ]
   
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,11 +21,13 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("test")
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize  = CGSize(width: 100, height: 100)
+        layout.itemSize  = CGSize(width: 100, height: 250)
         collectionView.collectionViewLayout = layout
         collectionView.register(NewsCollectionViewCell.nib(), forCellWithReuseIdentifier: NewsCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        
     }
 
 
@@ -63,11 +65,11 @@ extension MainViewController: UICollectionViewDataSource {
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let leftAndRightPaddings: CGFloat = 25.0
+        let leftAndRightPaddings: CGFloat = 15.0
         let numberOfItemsPerRow: CGFloat = 2.0
     
         let width = (collectionView.frame.width-leftAndRightPaddings)/numberOfItemsPerRow
-        return CGSize(width: width, height: width)
+        return CGSize(width: width, height: width + 50)
 
     }
 
