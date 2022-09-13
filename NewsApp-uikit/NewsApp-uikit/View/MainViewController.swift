@@ -6,12 +6,17 @@
 //
 import UIKit
 
+//protocol NewsSelectionDelegate {
+//    func didTapChoice(title: String, description: String, image: String)
+//}
+
 class MainViewController: UIViewController {
+  //  var selectionDelegate: NewsSelectionDelegate!
 
     var news = [
-    News(title: "xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat?", image: "where", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore "),
-    News(title: "Ut enim ad minim veniam, quis nostrud exercitation", image: "soccer", description: "Ut enim ad minim veniam, quis nostrud. "),
-    News(title: "Excepteur sint occaecat cupidatat", image: "btc", description: " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        News(title: "where?", image: "where", description: "where desc", link: "google1.com"),
+        News(title: "item2 soccer", image: "soccer", description: "soccer play goal faul ", link: "google2.com"),
+        News(title: "item3 btc item3 btc item3 btc item3 btc item3 btc", image: "btc", description:" btc money bank ", link: "google3.com")
     ]
   
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,7 +24,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("test")
+        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize  = CGSize(width: 100, height: 250)
         collectionView.collectionViewLayout = layout
@@ -36,9 +41,18 @@ class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        
         let new = news[indexPath.row]
+       // selectionDelegate.didTapChoice(title: new.title, description: new.description, image: new.image)
+        
+        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
+        detailsVC?.newTitle = new.title
+        detailsVC?.newDesc = new.description
+        detailsVC?.newImage = new.image
+        detailsVC?.newLink = new.link
 
-        print("item secildi \(new.title)")
+        self.navigationController?.pushViewController(detailsVC!, animated: true)
+        
     }
 }
 
@@ -60,6 +74,8 @@ extension MainViewController: UICollectionViewDataSource {
         
         return cell
     }
+    
+    
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {

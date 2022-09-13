@@ -7,11 +7,15 @@
 
 import UIKit
 
+
+
 class NewsCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var labelContainer: UIView!
     
+
     static let identifier = "NewsCollectionViewCell"
     
     override func awakeFromNib() {

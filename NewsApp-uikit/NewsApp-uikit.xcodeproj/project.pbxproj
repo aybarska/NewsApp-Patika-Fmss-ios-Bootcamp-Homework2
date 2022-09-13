@@ -17,6 +17,7 @@
 		03749AA128CF3FFB001A8061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03749AA028CF3FFB001A8061 /* Assets.xcassets */; };
 		03749AA428CF3FFB001A8061 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03749AA228CF3FFB001A8061 /* LaunchScreen.storyboard */; };
 		03749AAF28CF4116001A8061 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03749AAE28CF4116001A8061 /* MainViewController.swift */; };
+		03C277B428D0937800D65891 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C277B328D0937800D65891 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		03749AA328CF3FFB001A8061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03749AA528CF3FFB001A8061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03749AAE28CF4116001A8061 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		03C277B328D0937800D65891 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				03749AAE28CF4116001A8061 /* MainViewController.swift */,
+				03C277B328D0937800D65891 /* DetailsViewController.swift */,
 				0348625428CF5F060042EF3E /* NewsCollectionViewCell.swift */,
 				0348625528CF5F060042EF3E /* NewsCollectionViewCell.xib */,
 			);
@@ -179,6 +182,7 @@
 				03749A9F28CF3FF9001A8061 /* NewsApp_uikit.xcdatamodeld in Sources */,
 				03749A9528CF3FF9001A8061 /* AppDelegate.swift in Sources */,
 				03749A9728CF3FF9001A8061 /* SceneDelegate.swift in Sources */,
+				03C277B428D0937800D65891 /* DetailsViewController.swift in Sources */,
 				03749AAF28CF4116001A8061 /* MainViewController.swift in Sources */,
 				0348625628CF5F060042EF3E /* NewsCollectionViewCell.swift in Sources */,
 			);
