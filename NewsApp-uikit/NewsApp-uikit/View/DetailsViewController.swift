@@ -41,4 +41,7 @@ class DetailsViewController: UIViewController {
     }
     */
 
+    @IBAction func readMoreButtonTapped(_ sender: Any) {
+        
+    }
 }
