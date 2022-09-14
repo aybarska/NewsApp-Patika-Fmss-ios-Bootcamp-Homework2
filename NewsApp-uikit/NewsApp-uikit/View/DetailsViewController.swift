@@ -25,23 +25,12 @@ class DetailsViewController: UIViewController {
         imageView.image = UIImage(named: newImage)
         titleLabel.text = newTitle
         descLabel.text = newDesc
-        
-        print("item secildi \(newDesc)")
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     @IBAction func readMoreButtonTapped(_ sender: Any) {
-        
+        let webviewVC = storyboard?.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController
+        webviewVC?.webViewLink = newLink
+        self.navigationController?.pushViewController(webviewVC!, animated: true)
+
     }
 }

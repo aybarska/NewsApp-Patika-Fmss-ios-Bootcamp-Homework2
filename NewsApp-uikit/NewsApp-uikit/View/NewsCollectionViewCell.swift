@@ -20,17 +20,6 @@ class NewsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        labelContainer.layer.cornerRadius = 20
-//        labelContainer.clipsToBounds = true
-//        
-//        labelContainer.layer.shadowRadius = 20
-//        labelContainer.layer.shadowOpacity = 1.0
-//        labelContainer.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        labelContainer.layer.shadowColor = UIColor.gray.cgColor
-
-        
-       
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         

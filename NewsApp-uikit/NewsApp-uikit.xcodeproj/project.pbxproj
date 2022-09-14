@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0303317428D1F74600794F12 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0303317328D1F74600794F12 /* WebViewController.swift */; };
 		0348625628CF5F060042EF3E /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0348625428CF5F060042EF3E /* NewsCollectionViewCell.swift */; };
 		0348625728CF5F060042EF3E /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0348625528CF5F060042EF3E /* NewsCollectionViewCell.xib */; };
 		0348625928CF68DF0042EF3E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0348625828CF68DF0042EF3E /* News.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0303317328D1F74600794F12 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0348625428CF5F060042EF3E /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0348625528CF5F060042EF3E /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		0348625828CF68DF0042EF3E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				03C277B328D0937800D65891 /* DetailsViewController.swift */,
 				0348625428CF5F060042EF3E /* NewsCollectionViewCell.swift */,
 				0348625528CF5F060042EF3E /* NewsCollectionViewCell.xib */,
+				0303317328D1F74600794F12 /* WebViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				03C277B428D0937800D65891 /* DetailsViewController.swift in Sources */,
 				03749AAF28CF4116001A8061 /* MainViewController.swift in Sources */,
 				0348625628CF5F060042EF3E /* NewsCollectionViewCell.swift in Sources */,
+				0303317428D1F74600794F12 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

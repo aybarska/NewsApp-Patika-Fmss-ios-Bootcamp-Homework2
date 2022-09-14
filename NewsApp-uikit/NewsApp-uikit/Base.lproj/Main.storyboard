@@ -55,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6n-4e-LJV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6n-4e-LJV">
                                 <rect key="frame" x="85" y="498" width="244" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IyV-Yd-SKN"/>
@@ -73,7 +73,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Read More"/>
                                 <connections>
                                     <action selector="readMoreButtonTapped:" destination="4L2-DJ-s4J" eventType="touchUpInside" id="2c7-PK-SU0"/>
-                                    <segue destination="Kil-68-b7E" kind="show" id="lXZ-Nt-z8o"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hr3-et-QNn">
@@ -81,7 +80,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="g4Q-G4-zj5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -110,16 +109,17 @@
                         <outlet property="imageView" destination="ipv-z4-H2g" id="gQk-Rc-ZBN"/>
                         <outlet property="moreButton" destination="bAN-5t-u2G" id="raL-oc-UJM"/>
                         <outlet property="titleLabel" destination="O6n-4e-LJV" id="Wgh-yF-rYF"/>
+                        <segue destination="Kil-68-b7E" kind="show" identifier="webViewSegue" id="mAp-97-8cd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gI-lv-Nps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1608.6956521739132" y="-16.071428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="w04-Cv-tJ0">
             <objects>
-                <viewController id="Kil-68-b7E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="Kil-68-b7E" customClass="WebViewController" customModule="NewsApp_uikit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIJ-jv-Uoo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +128,8 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
@@ -143,6 +144,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YVY-Wo-1IR"/>
+                    <connections>
+                        <outlet property="detailWebView" destination="Vsb-K2-KNb" id="IIh-HK-ClS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEo-0b-tfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
