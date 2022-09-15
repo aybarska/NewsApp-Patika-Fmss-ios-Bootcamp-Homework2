@@ -2,17 +2,12 @@
 //  MainViewController.swift
 //  NewsApp-uikit
 //
-//  Created by Ayberk M on 12.09.2022.
+//  Created by Ayberk M on 12.09.2022. 🧚🏻‍♀️
 //
 import UIKit
 
-//protocol NewsSelectionDelegate {
-//    func didTapChoice(title: String, description: String, image: String)
-//}
-
 class MainViewController: UIViewController {
-  //  var selectionDelegate: NewsSelectionDelegate!
-
+   
     var news = [
         News(title: "Queen Elizabeth’s coffin is en route from Scotland to London", image: "queen", description: "Queen Elizabeth II’s coffin has left Edinburgh on its way to London, accompanied by the deceased monarch’s only daughter, Princess Anne.It is being flown to west London’s RAF Northolt airbase in a C-17 Globemaster transport plane, before it is driven to Buckingham Palace to rest in the Bow Room overnight.", link: "https://edition.cnn.com/2022/09/13/uk/queen-elizabeth-king-charles-northern-ireland-intl-gbr/index.html"),
         
@@ -27,43 +22,32 @@ class MainViewController: UIViewController {
         
         News(title: "Burger King has a plan", image: "burger", description: "The past few years have been tough for Burger King. Missteps during the pandemic caused the chain to lag behind competitors. Over the past few quarters, Burger King has been playing catch up, and now the company is hoping a major investment in restaurants and advertising will help spark growth and propel it ahead of its peers.", link: "https://edition.cnn.com/2022/09/12/business/burger-king-whopper/index.html")
         
-        
-        
-        
     ]
   
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize  = CGSize(width: 100, height: 250)
         collectionView.collectionViewLayout = layout
         collectionView.register(NewsCollectionViewCell.nib(), forCellWithReuseIdentifier: NewsCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        
     }
-
 
 }
 
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        
+
         let new = news[indexPath.row]
-       // selectionDelegate.didTapChoice(title: new.title, description: new.description, image: new.image)
-        
         let detailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         detailsVC?.newTitle = new.title
         detailsVC?.newDesc = new.description
         detailsVC?.newImage = new.image
         detailsVC?.newLink = new.link
-
         self.navigationController?.pushViewController(detailsVC!, animated: true)
         
     }
@@ -78,23 +62,15 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsCollectionViewCell.identifier, for: indexPath) as! NewsCollectionViewCell
         let new = news[indexPath.row]
-        
-        
         cell.configure(image: UIImage(named: new.image)!, title: new.title)
-//        let cellBg = UIView()
-//        cellBg.backgroundColor = UIColor(patternImage:UIImage(named:"border")!)
-//        cell.backgroundView = cellBg
-        
         return cell
     }
-    
-    
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let leftAndRightPaddings: CGFloat = 15.0
+        let leftAndRightPaddings: CGFloat = 15.0 // things gets messy below that number
         let numberOfItemsPerRow: CGFloat = 2.0
     
         let width = (collectionView.frame.width-leftAndRightPaddings)/numberOfItemsPerRow

@@ -2,7 +2,7 @@
 //  DetailsViewController.swift
 //  NewsApp-uikit
 //
-//  Created by Ayberk M on 13.09.2022.
+//  Created by Ayberk M on 13.09.2022. 🧚🏻‍♀️
 //
 
 import UIKit

@@ -2,32 +2,31 @@
 //  NewsCollectionViewCell.swift
 //  NewsApp-uikit
 //
-//  Created by Ayberk M on 12.09.2022.
+//  Created by Ayberk M on 12.09.2022. 🧚🏻‍♀️
 //
 
 import UIKit
 
-
-
 class NewsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var labelView: UIView! 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var labelContainer: UIView!
-    
 
     static let identifier = "NewsCollectionViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageView.layer.cornerRadius = 20
-        imageView.clipsToBounds = true
-        
-        imageView.layer.shadowRadius = 20
-        imageView.layer.shadowOpacity = 1.0
-        imageView.layer.shadowOffset = CGSize(width: 3, height: 3)
-        imageView.layer.shadowColor = UIColor.gray.cgColor
+        shapeImage(desiredImage: imageView)
     }
+    
+    override func draw(_ rect: CGRect) {
+        //make gradient size equal to imageview size
+        super.draw(rect)
+        drawGradient(desiredView: imageView)
+    }
+
+    
     
     public func configure(image: UIImage,title: String) {
         titleLabel.text = title
@@ -38,4 +37,32 @@ class NewsCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
+    
+    
+    public func drawGradient(desiredView: UIView) {
+        //creates new view and puts front of desired one with gradient
+        let view = UIView(frame: desiredView.frame)
+        let gradient = CAGradientLayer()
+        gradient.frame = view.frame
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradient.locations = [0.0, 1.0]
+        view.layer.insertSublayer(gradient, at: 0)
+        desiredView.addSubview(view)
+        desiredView.bringSubviewToFront(view)
+    }
+    
+    public func shapeImage(desiredImage: UIView) {
+        //cool image shape
+        desiredImage.layer.cornerRadius = 20
+        desiredImage.clipsToBounds = true
+        desiredImage.layer.shadowRadius = 20
+        desiredImage.layer.shadowOpacity = 1.0
+        desiredImage.layer.shadowOffset = CGSize(width: 3, height: 3)
+        desiredImage.layer.shadowColor = UIColor.gray.cgColor
+    }
+
 }
+
+
+
+

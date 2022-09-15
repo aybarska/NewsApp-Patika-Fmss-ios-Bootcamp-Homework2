@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "opener.png",
+      "filename" : "opener2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "opener-1.png",
+      "filename" : "opener2-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "opener-2.png",
+      "filename" : "opener2-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

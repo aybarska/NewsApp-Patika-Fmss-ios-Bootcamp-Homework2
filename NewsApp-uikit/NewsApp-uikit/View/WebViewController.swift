@@ -2,7 +2,7 @@
 //  WebViewController.swift
 //  NewsApp-uikit
 //
-//  Created by Ayberk M on 14.09.2022.
+//  Created by Ayberk M on 14.09.2022. 🧚🏻‍♀️
 //
 
 import UIKit
