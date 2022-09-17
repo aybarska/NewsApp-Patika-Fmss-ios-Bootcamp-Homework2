@@ -20,9 +20,6 @@ class NewsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         shapeImage(desiredImage: imageView)
-        //readedLabel.layer.cornerRadius = 20
-        //readedLabel.clipsToBounds = true
-
     }
    
     override func draw(_ rect: CGRect) {
