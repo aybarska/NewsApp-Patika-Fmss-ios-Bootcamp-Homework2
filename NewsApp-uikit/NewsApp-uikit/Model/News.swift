@@ -12,17 +12,20 @@ struct News {
     let image: String
     let description: String
     let link: String
+    let isReaded: Bool
    
     
-    init(title: String, image: String, description: String, link: String ) {
+    init(title: String, image: String, description: String, link: String, isReaded: Bool = false ) {
         self.title = title
         self.image = image
         self.description = description
         self.link = link
+        self.isReaded = isReaded
     }
     
-//    func completeToggled() -> News {
-//      return News(title: title, image: image, description: description, link: link)
-//    } // will be used for isReaded 
+    func markAsReaded() -> News {
+        //make readed
+      return News(title: title, image: image, description: description, link: link, isReaded: true)
+    }
     
 }
