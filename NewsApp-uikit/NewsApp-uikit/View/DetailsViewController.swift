@@ -10,7 +10,6 @@ import UIKit
 class DetailsViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
     
@@ -19,7 +18,6 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = UIImage(named: selectedNewsData.image)
-        titleLabel.text = selectedNewsData.title
         descLabel.text = selectedNewsData.description
         UILabel.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).adjustsFontSizeToFitWidth = true
     }

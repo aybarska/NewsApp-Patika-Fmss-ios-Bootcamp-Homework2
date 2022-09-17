@@ -13,7 +13,7 @@ class NewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelView: UIView! 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var readedLabel: UILabel!
+    
     
     static let identifier = "NewsCollectionViewCell"
     
@@ -35,18 +35,8 @@ class NewsCollectionViewCell: UICollectionViewCell {
     public func configure(image: UIImage,title: String, isReaded: Bool) {
         titleLabel.text = title
         imageView.image = image
-        if(isReaded == true) {
-            readedLabel.text = "Readed"
-        } else if (isReaded == false) {
-            readedLabel.isHidden = true
-            
-        }
     }
-    
-    public func readed(isReaded: Bool) {
-        readedLabel.text = "Readed"
-    }
-            
+                
     
     public func drawGradient(desiredView: UIView) {
         //creates new view and puts front of desired one with gradient

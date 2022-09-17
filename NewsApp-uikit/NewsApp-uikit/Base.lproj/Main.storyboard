@@ -55,17 +55,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6n-4e-LJV">
-                                <rect key="frame" x="85" y="498" width="244" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="IyV-Yd-SKN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipv-z4-H2g">
-                                <rect key="frame" x="20" y="108" width="374" height="375"/>
+                                <rect key="frame" x="20" y="108" width="374" height="392"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAN-5t-u2G">
                                 <rect key="frame" x="80" y="683" width="254" height="31"/>
@@ -76,7 +67,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hr3-et-QNn">
-                                <rect key="frame" x="37" y="546" width="340" height="100"/>
+                                <rect key="frame" x="37" y="563" width="340" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="g4Q-G4-zj5"/>
                                 </constraints>
@@ -88,17 +79,14 @@
                         <viewLayoutGuide key="safeArea" id="VYf-JH-csZ"/>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="O6n-4e-LJV" firstAttribute="leading" secondItem="VYf-JH-csZ" secondAttribute="leading" constant="85" id="0gM-O6-l5C"/>
-                            <constraint firstItem="Hr3-et-QNn" firstAttribute="centerX" secondItem="O6n-4e-LJV" secondAttribute="centerX" id="8Er-JW-INU"/>
                             <constraint firstItem="Hr3-et-QNn" firstAttribute="leading" secondItem="VYf-JH-csZ" secondAttribute="leading" constant="37" id="AEy-A0-58F"/>
                             <constraint firstItem="Hr3-et-QNn" firstAttribute="top" secondItem="ipv-z4-H2g" secondAttribute="bottom" constant="63" id="E3Q-SP-THC"/>
                             <constraint firstItem="ipv-z4-H2g" firstAttribute="leading" secondItem="XeG-4o-yD1" secondAttribute="leadingMargin" id="Hea-ar-Vsc"/>
-                            <constraint firstItem="O6n-4e-LJV" firstAttribute="top" secondItem="ipv-z4-H2g" secondAttribute="bottom" constant="15" id="JdE-Dl-Zvz"/>
                             <constraint firstItem="ipv-z4-H2g" firstAttribute="top" secondItem="VYf-JH-csZ" secondAttribute="top" constant="20" id="Paa-ck-UFC"/>
                             <constraint firstItem="VYf-JH-csZ" firstAttribute="bottom" secondItem="bAN-5t-u2G" secondAttribute="bottom" constant="148" id="Qms-kH-xMz"/>
                             <constraint firstItem="bAN-5t-u2G" firstAttribute="centerX" secondItem="ipv-z4-H2g" secondAttribute="centerX" id="adn-ue-dJ4"/>
                             <constraint firstItem="Hr3-et-QNn" firstAttribute="centerX" secondItem="bAN-5t-u2G" secondAttribute="centerX" id="d6L-pG-4jH"/>
-                            <constraint firstItem="bAN-5t-u2G" firstAttribute="top" secondItem="Hr3-et-QNn" secondAttribute="bottom" constant="37" id="dHy-Rd-Zss"/>
+                            <constraint firstItem="bAN-5t-u2G" firstAttribute="top" secondItem="Hr3-et-QNn" secondAttribute="bottom" constant="20" id="dHy-Rd-Zss"/>
                             <constraint firstItem="bAN-5t-u2G" firstAttribute="leading" secondItem="VYf-JH-csZ" secondAttribute="leading" constant="80" id="qjh-ZO-06W"/>
                             <constraint firstItem="ipv-z4-H2g" firstAttribute="trailing" secondItem="XeG-4o-yD1" secondAttribute="trailingMargin" id="udw-Kr-fjf"/>
                         </constraints>
@@ -108,7 +96,6 @@
                         <outlet property="descLabel" destination="Hr3-et-QNn" id="e26-7F-MYg"/>
                         <outlet property="imageView" destination="ipv-z4-H2g" id="gQk-Rc-ZBN"/>
                         <outlet property="moreButton" destination="bAN-5t-u2G" id="raL-oc-UJM"/>
-                        <outlet property="titleLabel" destination="O6n-4e-LJV" id="Wgh-yF-rYF"/>
                         <segue destination="Kil-68-b7E" kind="show" identifier="webViewSegue" id="mAp-97-8cd"/>
                     </connections>
                 </viewController>
