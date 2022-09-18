@@ -53,7 +53,6 @@ extension MainViewController: UICollectionViewDelegate {
         let detailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         let new = self.news[indexPath.row].markAsReaded()
         self.news[indexPath.row] = new
-        //collectionView.reloadItems(at: [indexPath]) // not workin properly
         detailsVC?.selectedNewsData = new
         detailsVC?.title = new.title
         self.navigationController?.pushViewController(detailsVC!, animated: true)

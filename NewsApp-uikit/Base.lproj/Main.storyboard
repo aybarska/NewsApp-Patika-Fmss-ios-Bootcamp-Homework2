@@ -130,7 +130,7 @@
                             <constraint firstItem="ufv-Mc-n5E" firstAttribute="bottom" secondItem="Vsb-K2-KNb" secondAttribute="bottom" id="vPj-Gu-eve"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YVY-Wo-1IR"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="YVY-Wo-1IR"/>
                     <connections>
                         <outlet property="detailWebView" destination="Vsb-K2-KNb" id="IIh-HK-ClS"/>
                     </connections>
